@@ -1,0 +1,126 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+@font-face {
+  font-family: figtree;
+  src: url(./assets/fonts/Figtree-VariableFont_wght.ttf);
+}
+
+:root {
+  /* Colors */
+  --yellow: #f4d04e;
+  --gray-950: #111111;
+  --gray-500: #6b6b6b;
+  --white: #ffffff;
+
+  /* Spacing */
+  --space-4: 4px;
+  --space-8: 8px;
+  --space-12: 12px;
+  --space-24: 24px;
+
+  /* Fonts */
+  --text-14: 14px;
+  --text-16: 16px;
+  --text-24: 24px;
+}
+
+body {
+  background-color: var(--yellow);
+  font-family: figtree;
+}
+
+.blog-card {
+  width: 384px;
+  height: 522px;
+  background-color: var(--white);
+  padding: var(--space-24);
+  border-radius: 20px;
+  margin: 20px auto;
+  display: grid;
+  position: relative;
+  gap: var(--space-24);
+}
+
+.blog-card::before {
+  content: "";
+  background-color: var(--gray-950);
+  position: absolute;
+  right: -7px;
+  top: 7px;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  border-radius: 20px;
+}
+
+.blog-card > img {
+  border-radius: 10px;
+  width: 336px;
+  height: 200px;
+}
+
+.content {
+  width: 336px;
+  height: 194px;
+  gap: var(--space-12);
+  display: grid;
+}
+
+.content .category {
+  background-color: var(--yellow);
+  padding: var(--space-4) var(--space-12);
+  border-radius: var(--space-4);
+  width: 82px;
+  height: 29px;
+  font-size: var(--text-14);
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gray-950);
+}
+
+.content .puplish-date {
+  color: var(--gray-950);
+  font-size: var(--text-14);
+  font-weight: 800;
+}
+
+.content .title {
+  font-size: var(--space-24);
+  font-weight: 800;
+  color: var(--gray-950);
+}
+
+.content .title:hover {
+  color: var(--yellow);
+  cursor: pointer;
+}
+
+.content .description {
+  color: var(--gray-500);
+  font-weight: medium;
+  font-size: var(--text-16);
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 129px;
+  height: 32px;
+}
+
+.author img {
+  width: 32px;
+  height: 32px;
+}
+
+.author .name {
+  font-size: var(--text-14);
+  font-weight: 800;
+  color: var(--gray-950);
+}
